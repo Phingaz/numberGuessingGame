@@ -9,8 +9,9 @@ const displayMsg = function (message) {
 }
 
 document.querySelector(".check").addEventListener("click", (e) => {
+    console.log(secretNumber);
     const guess = Number(document.querySelector(".guess").value)
-    //If no inout
+    //If no input
     if (!guess) {
         displayMsg("Enter a number!!")
     }
@@ -38,7 +39,7 @@ document.querySelector(".check").addEventListener("click", (e) => {
             document.querySelector("body").style.background = "red"
             document.querySelector(".number").style.width = "#30rem"
             document.querySelector(".score").textContent = 0
-            document.querySelector(".check").classList.remove("check").classList.add("again")
+            document.querySelector(".left").classList.add("remove")
         }
     }
 })
@@ -51,6 +52,5 @@ document.querySelector(".again").addEventListener("click", () => {
     document.querySelector(".score").textContent = score
     document.querySelector(".number").textContent = "?"
     document.querySelector(".guess").value = ""
+    document.querySelector(".left").classList.remove("remove")
 })
-
-
