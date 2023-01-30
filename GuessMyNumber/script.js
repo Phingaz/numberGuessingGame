@@ -21,6 +21,7 @@ document.querySelector(".check").addEventListener("click", (e) => {
         document.querySelector(".number").textContent = secretNumber
         document.querySelector("body").style.background = "#60b347"
         document.querySelector(".number").style.width = "#30rem"
+        document.querySelector(".left").classList.add("remove")
 
         if (score > highscore) {
             highscore = score;
